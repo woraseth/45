@@ -1,3 +1,5 @@
+# my son was born on Loy Kratong day
+
 amas = [34,36,39,42,45,47,50,53,55]
 awan = [40,43,49,52]
 norm_day, awan_day, amas_day = 354, 355, 384
