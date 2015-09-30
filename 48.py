@@ -1,4 +1,4 @@
-# music (note, octave) to freq
+# 48 - music (note, octave) to freq
 
 a = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
 d = dict(zip(a, range(len(a))))
