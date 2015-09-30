@@ -1,3 +1,5 @@
+# 59 - it was called 'Directory'
+
 freq = {}
 while True:
   try:
