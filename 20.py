@@ -1,3 +1,5 @@
+# 20 - how do we end up at this point?
+
 s = input()
 sum = 0
 for c in s:
