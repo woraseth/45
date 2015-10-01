@@ -18,6 +18,8 @@ for i in range(1, N + 1):
           if 32 <= c and c <= 126:
             sm += c * index
             index += 1
+            if index > 9991:
+              index = 1
             sm %= 99991
       h[i-1] = sm
   except:
