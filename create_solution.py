@@ -11,11 +11,13 @@ for i in range(1, N + 1):
     out_file.close()
     with open('%02d.out2' % i, 'r') as f:
       sm = 0
+      index = 1
       for line in f:
         for c in line:
           c = ord(c)
           if 32 <= c and c <= 126:
-            sm += c
+            sm += c * index
+            index += 1
       sm %= 1013
       h[i-1] = sm
   except:
