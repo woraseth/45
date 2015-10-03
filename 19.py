@@ -12,5 +12,5 @@ for key in d:
   d[key].sort()
 tt = int(input())
 for _ in range(tt):
-  names = input().split()
-  print(' '.join(d[names[0][0] + names[1][0]]))
+  fn, ln = input().split()
+  print(' '.join(d[fn[0] + ln[0]]))
