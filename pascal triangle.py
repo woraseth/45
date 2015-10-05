@@ -1,5 +1,3 @@
-# 41 - polygene
-
 n = int(input())
 a = [1, 1]
 for i in range(n-1):
