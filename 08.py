@@ -12,3 +12,5 @@ for _ in range(tt):
     print(c // d, end=' ')
   if c % d != 0:
     print('%d/%d' % (c % d, d))
+  if c // d == 0 and c % d == 0:
+    print(0)
