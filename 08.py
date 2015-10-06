@@ -8,9 +8,12 @@ for _ in range(tt):
   g = gcd(c, d)
   c //= g
   d //= g
-  if c // d != 0:
-    print(c // d, end=' ')
-  if c % d != 0:
-    print('%d/%d' % (c % d, d))
-  if c // d == 0 and c % d == 0:
+  n = c // d
+  if n == 0 and c % d == 0:
     print(0)
+  elif n != 0 and c % d != 0:
+    print('%d %d/%d' % (n, c % d, d))
+  elif n != 0 and c % d == 0:
+    print(n)
+  else:
+    print('%d/%d' % (c % d, d))
