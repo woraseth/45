@@ -1,4 +1,4 @@
-# 08 - pris
+# 04 - pris
 
 from math import gcd  # python 3.5
 
