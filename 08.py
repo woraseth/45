@@ -1,4 +1,4 @@
-# 06 - quarter
+# 08 - quarter
 
 target = int(float(input())*100)
 cnt = 0
