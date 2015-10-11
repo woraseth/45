@@ -1,4 +1,4 @@
-# 11 - license plate
+# 10 - license plate
 tt = int(input())
 for _ in range(tt):
   s = input()
