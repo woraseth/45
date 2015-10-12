@@ -1,3 +1,5 @@
+# #LongReceipt
+
 def shorten(s):
   if len(s) <= 10:
     return s + ' ' * (10 - len(s))
@@ -10,8 +12,8 @@ while True:
   line = input().split()
   if line[0] == 'end':
     break
-  price = int(line[len(line)-1])
-  prod = " ".join(line[:len(line)-1])
+  price = int(line[-1])
+  prod = " ".join(line[:-1])
   d[prod] = (1, price) if prod not in d else (d[prod][0] + 1, price)
 a = [p for p in d]
 a.sort()
