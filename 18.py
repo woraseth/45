@@ -9,7 +9,8 @@ for _ in range(tt):
   password = input()
   lower = password.lower()
   if len(password) < 10 or \
-     lower == password or \
+     password == password.upper() or \
+     password == lower or \
      any(w in lower for w in words) or \
      all(alphanum(c) for c in lower):
     print('weak password')
