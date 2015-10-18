@@ -1,4 +1,4 @@
-# 51 - pie chart
+#  pie chart
 
 tt = int(input())
 for _ in range(tt):
