@@ -1,4 +1,4 @@
-# 47 - cry so hard
+# cry so hard
 
 tt = int(input())
 for _ in range(tt):
