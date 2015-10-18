@@ -1,4 +1,4 @@
-# 52 - tourbillon
+# tourbillon
 
 tt = int(input())
 for _ in range(tt):
