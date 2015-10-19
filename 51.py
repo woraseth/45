@@ -1,3 +1,4 @@
+# lat long
 def f(a, d):
   a[0] = int(d)
   d -= int(d)
