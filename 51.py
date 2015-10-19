@@ -12,16 +12,10 @@ def f(a, d):
 tt = int(input())
 for _ in range(tt):  
   lat, lng = (float(s) for s in input().split())
-  if lat < 0: 
-    dir_lat = 'S'
-    lat *= -1
-  else:
-    dir_lat = 'N'
-  if lng < 0: 
-    dir_lng = 'W'
-    lng *= -1
-  else:
-    dir_lng = 'E'
+  dir_lat = 'S' if lat < 0 else 'N'
+  dir_lng = 'W' if lng < 0 else 'E'
+  lat = abs(lat)
+  lng = abs(lng)
   lats = [0] * 3
   lngs = [0] * 3
   f(lats, lat)
