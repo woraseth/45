@@ -33,6 +33,6 @@ for i in range(1, N + 1):
   except:
     print('error at %d' % i)
 
-with open('solution.txt', 'w') as f:
+with open('solution.45.txt', 'w') as f:
   for i in range(N):
     print('%02d %d' % (i+1, h[i]), file=f)
