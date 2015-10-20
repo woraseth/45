@@ -1,1 +1,1 @@
-# 60 problems for my Python book
+# 45 problems for my Python book
