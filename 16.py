@@ -13,4 +13,7 @@ for key in d:
 tt = int(input())
 for _ in range(tt):
   fn, ln = input().split()
-  print(' '.join(d[fn[0] + ln[0]]))
+  if fn[0] + ln[0] in d:
+    print(' '.join(d[fn[0] + ln[0]]))
+  else:
+    print('You should change your firstname or lastname')

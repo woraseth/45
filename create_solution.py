@@ -1,14 +1,22 @@
 import subprocess
+import os.path
 
-N = 60
+N = 45
 h = [0] * N
 for i in range(1, N + 1):
   try:
-    in_file = open('%02d.in2' % i, 'r')
-    out_file = open('%02d.out2' % i, 'w')
-    subprocess.call(["python", "%02d.py" % i], stdin=in_file, stdout=out_file)
-    in_file.close()
-    out_file.close()
+    print(i)
+    if os.path.isfile('%02d.in2' % i):
+      in_file = open('%02d.in2' % i, 'r')
+      out_file = open('%02d.out2' % i, 'w')
+      subprocess.call(["python", "%02d.py" % i], stdin=in_file, stdout=out_file)
+      in_file.close()
+      out_file.close()
+    else:
+      out_file = open('%02d.out2' % i, 'w')
+      subprocess.call(["python", "%02d.py" % i], stdout=out_file)
+      out_file.close()
+      
     with open('%02d.out2' % i, 'r') as f:
       sm = 0
       index = 1
@@ -27,4 +35,4 @@ for i in range(1, N + 1):
 
 with open('solution.txt', 'w') as f:
   for i in range(N):
-    print('%02d %d' % (i, h[i]), file=f)
+    print('%02d %d' % (i+1, h[i]), file=f)
