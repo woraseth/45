@@ -1,3 +1,5 @@
+# mind graffiti
+
 def dec(c):
   cc = ord(c)
   if ord('a') <= cc and cc <= ord('z'):
