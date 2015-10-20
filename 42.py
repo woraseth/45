@@ -1,18 +1,18 @@
-#a = ['ab', 'aB', 'Ab', 'AB', ]
-a = ['ABC', 'ABc', 'AbC', 'Abc', 'aBC', 'aBc', 'abC', 'abc']
-d = {}
-for i in range(len(a)):
-  for j in range(len(a)):
-    s = a[i][0] + a[j][0] + a[i][1] + a[j][1] + a[i][2] + a[j][2]
-    caps = len(list(filter(lambda c : c == c.upper(), s)))
-    if caps in d:
-      d[caps].append(s)
+# 59 - it was called 'Directory'
+
+freq = {}
+while True:
+  try:
+    s = input()
+    s = s[:s.rfind('\\')]
+    if s in freq:
+      freq[s] += 1
     else:
-      d[caps] = [s]
-for k in d:
-  d[k].sort()
-n = [k for k in d]
-n.sort()
-n.reverse()
-for i in n:
-  print('%d (%s)' % (len(d[i]), ', '.join(d[i])))
+      freq[s] = 1
+  except:
+    break
+
+a = list(freq)
+a.sort()
+for s in a:
+  print(s, freq[s])

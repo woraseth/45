@@ -1,11 +1,13 @@
-# 24 - PS
-
-template = input()
-template = template.replace('<', '{')
-template = template.replace('>', '}')
+# 34 - allergic to bangkok
 
 tt = int(input())
+m = [[' '] * 70 for i in range(70)]
 for _ in range(tt):
-  a = [s.strip() for s in input().split(',')]
-  a.insert(0, None)
-  print(template.format(*a))
+  x, width, height = (int(s) for s in input().split())
+  x -= 1
+  for h in range(height):
+    for w in range(width):
+      m[h][x+w] = 'X'
+for h in reversed(range(70)):
+  if 'X' in m[h]:
+    print(''.join(m[h]))

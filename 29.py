@@ -1,15 +1,18 @@
-# 29 - my son was born on Loy Kratong day
-
-amas = [34,36,39,42,45,47,50,53,55]
-awan = [40,43,49,52]
-norm_day, awan_day, amas_day = 354, 355, 384
-days = 0
-for year in range(55, 33, -1):
-  from datetime import date, timedelta
-  print(date(2012,12,14) - timedelta(days=days+16))
-  if year in amas:
-    days += amas_day
-  elif year in awan:
-    days += awan_day
-  else:
-    days += norm_day
+#a = ['ab', 'aB', 'Ab', 'AB', ]
+a = ['ABC', 'ABc', 'AbC', 'Abc', 'aBC', 'aBc', 'abC', 'abc']
+d = {}
+for i in range(len(a)):
+  for j in range(len(a)):
+    s = a[i][0] + a[j][0] + a[i][1] + a[j][1] + a[i][2] + a[j][2]
+    caps = len(list(filter(lambda c : c == c.upper(), s)))
+    if caps in d:
+      d[caps].append(s)
+    else:
+      d[caps] = [s]
+for k in d:
+  d[k].sort()
+n = [k for k in d]
+n.sort()
+n.reverse()
+for i in n:
+  print('%d (%s)' % (len(d[i]), ', '.join(d[i])))

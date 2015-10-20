@@ -1,19 +1,14 @@
-# Fairarie, the Naughty Fairy
+# intania 
 
-def next(time):
-  if time[1] == 59:
-    time[1] = 0
-    time[0] += 1
-    if time[0] == 24:
-      time[0] = 0
-  else:
-    time[1] += 1
+p = ['', 'k', 'M', 'G', 'T', 'P', 'E']
+def engineer(s):
+  exp = len(s) - 1
+  exp //= 3
+  pos = len(s) - exp * 3
+  s = s[:pos] + '.' + s[pos:]
+  s = s.rstrip('0').rstrip('.')
+  return s + '%s' % (p[exp])
 
 tt = int(input())
 for _ in range(tt):
-  time = [int(s) for s in input().split(':')]
-  count = 0
-  while time != [5, 59]:
-    next(time)
-    count += 1
-  print(count)
+  print(engineer(input()))

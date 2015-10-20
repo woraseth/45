@@ -1,15 +1,13 @@
-def fill(x, y):
-  m[y][x] = 1
-  if m[y][x-1] == 0: fill(x-1,y)
-  if m[y][x+1] == 0: fill(x+1,y)
-  if m[y-1][x] == 0: fill(x,y-1)
-  if m[y+1][x] == 0: fill(x,y+1)
+# Tetranacci
 
-width, height = (int(s) for s in input().split())
-m = []
-for _ in range(height):
-  m.append([int(s) for s in input()])
-x, y = (int(s) for s in input().split())
-fill(x-1, y-1)
-for i in range(height):
-  print(''.join(str(n) for n in m[i]))
+def f(n):
+  a = [0,1,1,2]
+  if n > 3:
+    a.extend([0] * (n-3))
+  for i in range(4, len(a)):
+    a[i] = a[i-1]+a[i-2]+a[i-3]+a[i-4] 
+  return a[n]
+
+tt = int(input())
+for _ in range(tt):
+  print(f(int(input())))

@@ -1,6 +1,8 @@
-a = [int(s) for s in input().split()]
-mean = sum(a) / len(a)
-d = [(a[i] - mean) ** 2 for i in range(len(a))]
-var = sum(d) / len(d)
-from math import sqrt
-print('%.3f' % sqrt(var))
+# 60 - social network
+
+jace = input().split()
+lala = input().split()
+a = [j for j in jace if j in lala]
+a.append('Lalana')
+a.sort()
+print(', '.join(a))

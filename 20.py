@@ -1,16 +1,19 @@
-# 20 - how do we end up at this point?
+# Fairarie, the Naughty Fairy
 
-s = input()
-sum = 0
-for c in s:
-  c = ord(c)
-  if 0x30 <= c and c <= 0x39:
-    sum += 1
+def next(time):
+  if time[1] == 59:
+    time[1] = 0
+    time[0] += 1
+    if time[0] == 24:
+      time[0] = 0
   else:
-    if c < 10:
-      sum += 1
-    elif c < 100:
-      sum += 2
-    else:
-      sum += 3
-print(sum)
+    time[1] += 1
+
+tt = int(input())
+for _ in range(tt):
+  time = [int(s) for s in input().split(':')]
+  count = 0
+  while time != [5, 59]:
+    next(time)
+    count += 1
+  print(count)
