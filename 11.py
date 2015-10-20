@@ -1,3 +1,5 @@
+# numberg light pole
+
 def prime(n):
   is_prime = [True] * n
   is_prime[0] = False
