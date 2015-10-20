@@ -11,8 +11,7 @@ for _ in range(state):
   if cur == None:
     cur = a[0]
 
-print(d)
-s = cur
+s = ''
 for b in binstr:
   b = int(b)
   cur = d[cur][b]
