@@ -11,9 +11,13 @@ def read_solve():
     
 def write_solve(a):
   with open('solved.45.txt', 'w') as f:
-    f.write(a)
+    f.write(' '.join(a))
     
 i = int(sys.argv[1])
+
+if i not in range(1, 46):
+  sys.exit('invalide number')
+  
 if os.path.isfile('%02d.in2' % i):
   in_file = open('%02d.in2' % i, 'r')
   out_file = open('%02d.out2' % i, 'w')
@@ -39,7 +43,7 @@ with open('%02d.out2' % i, 'r') as f:
         sm %= 99991
   h = sm
   
-with open('solution.45.txt', 'w') as f:
+with open('solution.45.txt', 'r') as f:
   for line in f:
     a = [int(s) for s in line.split()]
     if a[0] == i:
@@ -49,7 +53,7 @@ with open('solution.45.txt', 'w') as f:
         if str(i) not in solved:
           solved.append(str(i))
         write_solve(solved) 
-        print('Correct. You have % problems remaining.' % (45 - len(solved)))
+        print('Correct. You have %d problems remaining.' % (45 - len(solved)))
       else:
-        print('Incorrect. You have % problems remaining.' % (45 - len(solved)))
+        print('Incorrect. You have %d problems remaining.' % (45 - len(solved)))
       break
