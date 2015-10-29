@@ -8,4 +8,4 @@ def trapezoidal(f, a, b, n):
 tt = int(input())
 for _ in range(tt):
   n = int(input())
-  print('%.1f' % trapezoidal(lambda x : -3*x*x + 12, -2, 2, n)) 
+  print('%.1f' % (30 * trapezoidal(lambda x : -3*x*x + 12, -2, 2, n))) 
