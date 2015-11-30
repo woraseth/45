@@ -11,6 +11,6 @@ for _ in range(tt):
     shuffle(deck)
     b = deck[:5]
     b.sort()
-    if b[0] + 1 == b[1] and b[1] + 1 == b[2] and b[2] + 1 == b[3] and b[3] + 1 == b[4]:
+    if all(b[i] + 1 == b[i + 1] for i in range(4)):
       count += 1
   print('%.0f' % (count*100/run))
